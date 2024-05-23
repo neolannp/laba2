@@ -43,7 +43,7 @@ public ArrayList<ArrayList<Double>> readExcel() {
                 for (int i = 0; i < numberOfColumns; i++) {
                     Cell cell = row.getCell(i);
                     if (cell != null) {
-                        if (cell.getCellType() == CellType.NUMERIC) {
+                        if (cell.getCellType() == CellType.NUMERIC||cell.getCellType()== CellType.FORMULA) {
                             result.get(i).add(cell.getNumericCellValue());
                         }
                     }

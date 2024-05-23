@@ -9,7 +9,7 @@ public class SampleSizeCounter implements Counter{
     ArrayList<ArrayList<Double>> list;
     ArrayList<Double> total= new ArrayList<>();
     public SampleSizeCounter(ArrayList<ArrayList<Double>> list){
-        this.name="sample size";
+        this.name="sample range";
         this.list=list;
         count();
     }
