@@ -54,7 +54,7 @@ public class Sheets {
     public String[] namesNumbers() {
         String[] temp = new String[numberSheets];
         for (int i = 0; i < temp.length; i++) {
-            temp[i] = "sheet № " + Integer.toString(i) + "  name: " + workbook.getSheetAt(i).getSheetName();
+            temp[i] = "sheet № " + Integer.toString(i+1) + "  name: " + workbook.getSheetAt(i).getSheetName();
         }
         return temp;
     }

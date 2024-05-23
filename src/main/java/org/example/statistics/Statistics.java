@@ -22,7 +22,6 @@ public class Statistics {
     public void countStatistics(ArrayList<ArrayList<Double>> inf){
         counters.add(arithmeticMeanCounter=new ArithmeticMeanCounter(inf));
         counters.add(confidenceIntervalCounter=new ConfidenceIntervalCounter(inf));
-//        counters.add(coefficientOfCovarianceCounter=new CoefficientOfCovarianceCounter(inf));
         counters.add(coefficientOfVariationCounter=new CoefficientOfVariationCounter(inf));
         counters.add(estOfStandardDeviationCounter=new EstOfStandardDeviationCounter(inf));
         counters.add(estOfVarianceCounter=new EstOfVarianceCounter(inf));
