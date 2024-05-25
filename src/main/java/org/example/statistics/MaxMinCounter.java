@@ -16,11 +16,10 @@ public class MaxMinCounter implements Counter{
 
     @Override
     public void count() {
-        DescriptiveStatistics stat = new DescriptiveStatistics();
-        for (int i = 0; i < list.size(); i++) {
-            list.get(i).forEach(stat::addValue);
-            String maxmin = "[" + stat.getMax() + "; " + stat.getMin() + "]";
-            total.add(maxmin);
+        for (ArrayList<Double> doubles : list) {
+            DescriptiveStatistics stat = new DescriptiveStatistics();
+            doubles.forEach(stat::addValue);
+            total.add("[" + stat.getMax() + "; " + stat.getMin() + "]");
         }
     }
 

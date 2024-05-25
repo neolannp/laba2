@@ -16,8 +16,8 @@ public class EstOfStandardDeviationCounter implements Counter{
 
     @Override
     public void count() {
-        DescriptiveStatistics stat = new DescriptiveStatistics();
         for (int i = 0; i < list.size(); i++) {
+            DescriptiveStatistics stat = new DescriptiveStatistics();
             list.get(i).forEach(stat::addValue);
             total.add(stat.getStandardDeviation());
         }

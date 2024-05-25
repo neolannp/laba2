@@ -19,7 +19,7 @@ public class CoefficientOfVariationCounter implements Counter{
         DescriptiveStatistics stat = new DescriptiveStatistics();
         for (int i = 0; i < list.size(); i++) {
             list.get(i).forEach(stat::addValue);
-            total.add(stat.getStandardDeviation()/stat.getMean());
+            total.add(Math.abs(stat.getStandardDeviation()/stat.getMean()));
         }
     }
 
